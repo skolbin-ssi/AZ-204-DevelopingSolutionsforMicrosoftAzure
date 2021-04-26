@@ -1,12 +1,13 @@
 ---
 lab:
-    title: 'Lab: Creating a multi-tier API by using Azure API Management'
+    az204Title: 'Lab 08: Creating a multi-tier solution by using services in Azure'
+    az020Title: 'Lab 08: Creating a multi-tier solution by using services in Azure'
     az204Module: 'Module 08: Implement API Management'
     az020Module: 'Module 08: Implement API Management'
     type: 'Answer Key'
 ---
 
-# Lab: Creating a multi-tier solution by using services in Azure
+# Lab 08: Creating a multi-tier solution by using services in Azure
 # Student lab answer key
 
 ## Microsoft Azure user interface
@@ -109,7 +110,7 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
 
 1.  From the **Resource groups** blade, select the **ApiService** resource group that you created earlier in this lab.
 
-1.  From the **ManagedPlatform** blade, select the **httpapi*[yourname]*** web app that you created earlier in this lab.
+1.  From the **ApiService** blade, select the **httpapi*[yourname]*** web app that you created earlier in this lab.
 
 1.	From the **Web App** blade, select **Browse**.
 
@@ -166,6 +167,8 @@ In this exercise, you created a new Azure web app by using a container image sou
     1.  In the **Organization name** text box, enter **Contoso**.
     
     1.  Leave the **Administrator email** text box set to its default value.
+
+        > **Note**: If this field is empty, you can enter any non-working email address.
     
     1.  In the **Pricing tier** list, select **Consumption (99.9 SLA, %)**.
     
@@ -332,19 +335,15 @@ In this exercise, you built a proxy tier between your App Service resource and a
 
 #### Task 1: Open Azure Cloud Shell
 
-1.  In the portal, select the **Cloud Shell** icon to open a new shell instance.
+1.  In the Azure portal's navigation pane, select the **Cloud Shell** icon to open a new shell instance.
 
-1.  In the portal, at the **Cloud Shell** command prompt, enter the following command, and then select Enter to list all resource groups in the subscription:
+    > **Note**: The **Cloud Shell** icon is represented by a greater than sign (\>) and underscore character (\_).
 
-    ```
-    az group list
-    ```
+1.  If this is your first time opening Cloud Shell using your subscription, you can use the **Welcome to Azure Cloud Shell Wizard** to configure Cloud Shell for first-time usage. Perform the following actions in the wizard:
+    
+    -   A dialog box prompts you to configure the shell. Select **Bash**, review the selected subscription, and then select **Create storage**. 
 
-1.  Enter the following command, and then select Enter to observe a list of possible commands to delete a resource group:
-
-    ```
-    az group delete --help
-    ```
+    > **Note**: Wait for Cloud Shell to finish its initial setup procedures before moving forward with the lab. If you don't notice Cloud Shell configuration options, this is most likely because you're using an existing subscription with this course's labs. The labs are written with the presumption that you're using a new subscription.
 
 #### Task 2: Delete resource groups
 

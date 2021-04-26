@@ -1,11 +1,11 @@
 ---
 lab:
-    title: 'Lab: Deploying compute workloads by using images and containers'
+    az204Title: 'Lab 05: Deploying compute workloads by using images and containers'
     az204Module: 'Module 05: Implement IaaS solutions'
     type: 'Answer Key'
 ---
 
-# Lab: Deploying compute workloads by using images and containers
+# Lab 05: Deploying compute workloads by using images and containers
 # Student lab answer key
 
 ## Microsoft Azure user interface
@@ -86,13 +86,13 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
 
 #### Task 3: Open Azure Cloud Shell
 
-1.  In the portal, select the **Cloud Shell** icon to open a new shell instance.
+1.  In the Azure portal, select the **Cloud Shell** icon to open a new shell instance.
 
     > **Note**: The **Cloud Shell** icon is represented by a greater than sign () and underscore character (\_).
 
 1.  If this is your first time opening Cloud Shell using your subscription, you can use the **Welcome to Azure Cloud Shell Wizard** to configure Cloud Shell for first-time usage. Perform the following actions in the wizard:
     
-    1.  A dialog box prompts you to create a new storage account to begin using the shell. Accept the default settings, and then select **Create storage**. 
+    1.  A dialog box prompts you to configure the shell. Select **Bash**, review the selected subscription, and then select **Create storage**. 
 
     > **Note**: Wait for Cloud Shell to finish its initial setup procedures before moving forward with the lab. If you don't notice the **Cloud Shell** configuration options, this is most likely because you're using an existing subscription with this course's labs. The labs are written with the presumption that you're using a new subscription.
 
@@ -293,8 +293,8 @@ In this exercise, you used Cloud Shell to create a VM as part of an automated sc
 1.  Copy and paste the following code into the **Dockerfile** file:
 
     ```
-    # Start using the .NET Core 2.2 SDK container image
-    FROM mcr.microsoft.com/dotnet/core/sdk:2.2-alpine AS build
+    # Start using the .NET Core 3.1 SDK container image
+    FROM mcr.microsoft.com/dotnet/sdk:3.1-alpine AS build
 
     # Change current working directory
     WORKDIR /app
@@ -337,8 +337,6 @@ In this exercise, you used Cloud Shell to create a VM as part of an automated sc
 
     1.  In the **Location** text box, select **East US**.
 
-    1.  In the **Admin user** section, select **Disable**.
-
     1.  In the **SKU** drop-down list, select **Basic**.
 
     1.  Select **Create**.  
@@ -347,7 +345,7 @@ In this exercise, you used Cloud Shell to create a VM as part of an automated sc
 
 #### Task 4: Open Azure Cloud Shell and store Container Registry metadata
 
-1.  In the portal, select the **Cloud Shell** icon to open a new shell instance.  
+1.  In the Azure portal, select the **Cloud Shell** icon to open a new shell instance.  
 
     > **Note**: Wait for Cloud Shell to finish connecting to an instance before moving forward with the lab.
 
@@ -479,29 +477,11 @@ In this exercise, you created a .NET console application to display a machine’
 
 #### Task 3: Manually deploy a container image to Container Instances
 
-1.  In the Azure portal's navigation pane, select the **Resource groups** link.
-
-1.  From the **Resource groups** blade, find and then select the **ContainerCompute** resource group that you created earlier in this lab.
-
-1.  From the **ContainerCompute** blade, select the container registry that you created earlier in this lab.
-
-1.  From the **Container Registry** blade, find the **Settings** section, and then select the **Access keys** link.
-
-1.  In the **Access Keys** section, record the values for the following fields:
-    
-    1.  **Login server**
-    
-    1.  **Username**
-    
-    1.  **Password**
-
-    > **Note**: You'll use these values later in this lab when you create another container instance.
-
 1.  In the Azure portal's navigation pane, select the **Create a resource** link.
 
 1.  From the **New** blade, find the **Search the Marketplace** text box above the list of featured services.
 
-1.  In the search box, enter **Container instance**, and then select Enter.
+1.  In the search box, enter **container instances**, and then select Enter.
 
 1.  From the **Marketplace** search results blade, select the **Container Instances** result.
 
@@ -563,19 +543,15 @@ In this exercise, you used multiple methods to deploy a container image to an Az
 
 #### Task 1: Open Azure Cloud Shell and list resource groups
 
-1.  In the portal, select the **Cloud Shell** icon to open a new shell instance.
+1.  In the Azure portal's navigation pane, select the **Cloud Shell** icon to open a new shell instance.
 
-1.  At the **Cloud Shell** command prompt in the portal, enter the following command, and then select Enter to list all resource groups in the subscription:
+    > **Note**: The **Cloud Shell** icon is represented by a greater than sign () and underscore character (\_).
 
-    ```
-    az group list
-    ```
+1.  If this is your first time opening Cloud Shell using your subscription, you can use the **Welcome to Azure Cloud Shell Wizard** to configure Cloud Shell for first-time usage. Perform the following actions in the wizard:
+    
+    1.  A dialog box prompts you to configure the shell. Select **Bash**, review the selected subscription, and then select **Create storage**. 
 
-1.  Enter the following command, and then select Enter to find a list of possible commands to delete a resource group:
-
-    ```
-    az group delete --help
-    ```
+    > **Note**: Wait for Cloud Shell to finish its initial setup procedures before moving forward with the lab. If you don't notice Cloud Shell configuration options, this is most likely because you are using an existing subscription with this course's labs. The labs are written with the presumption that you are using a new subscription.
 
 #### Task 2: Delete resource groups
 

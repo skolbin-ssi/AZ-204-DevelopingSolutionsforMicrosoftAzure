@@ -1,12 +1,13 @@
 ---
 lab:
-    title: 'Lab: Retrieving Azure Storage resources and metadata by using the Azure Storage SDK for .NET'
+    az204Title: 'Lab 03: Retrieving Azure Storage resources and metadata by using the Azure Storage SDK for .NET'
+    az020Title: 'Lab 03: Retrieving Azure Storage resources and metadata by using the Azure Storage SDK for .NET'
     az204Module: 'Module 03: Develop solutions that use blob storage'
     az020Module: 'Module 03: Develop solutions that use blob storage'
     type: 'Answer Key'
 ---
 
-# Lab: Retrieving Azure Storage resources and metadata by using the Azure Storage SDK for .NET
+# Lab 03: Retrieving Azure Storage resources and metadata by using the Azure Storage SDK for .NET
 # Student lab answer key
 
 ## Microsoft Azure user interface
@@ -59,7 +60,7 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
 
 1.  On the **Storage accounts** blade, find your list of Storage instances.
 
-1.  On the **Storage accounts** blade, select **Add**.
+1.  On the **Storage accounts** blade, select **New**.
 
 1.  Find the tabs on the **Create storage account** blade, such as **Basics**.
 
@@ -80,8 +81,6 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
     1.  In the **Account kind** drop-down list, select **StorageV2 (general purpose v2)**.
 
     1.  In the **Replication** drop-down list, select **Read-access geo-redundant storage (RA-GRS)**.
-
-    1.  In the **Access tier** section, ensure that **Hot** is selected.
 
     1.  Select **Review + Create**.
 
@@ -418,7 +417,7 @@ In this exercise, you created a couple of placeholder containers in the storage 
     ```
     public static async Task Main(string[] args)
     {
-        \\ Existing code removed for brevity
+        // Existing code removed for brevity
         
         await EnumerateContainersAsync(serviceClient);
     }
@@ -515,7 +514,7 @@ In this exercise, you accessed existing containers by using the Azure Storage SD
     ```
     public static async Task Main(string[] args)
     {
-        \\ Existing code removed for brevity
+        // Existing code removed for brevity
         
         await EnumerateContainersAsync(serviceClient);
 
@@ -606,7 +605,7 @@ In this exercise, you accessed existing containers by using the Azure Storage SD
     ```
     public static async Task Main(string[] args)
     {
-        \\ Existing code removed for brevity
+        // Existing code removed for brevity
         
         await EnumerateContainersAsync(serviceClient);
 
@@ -720,7 +719,7 @@ In this exercise, you accessed existing containers by using the Azure Storage SD
     ```
     public static async Task Main(string[] args)
     {
-        \\ Existing code removed for brevity
+        // Existing code removed for brevity
         
         await EnumerateContainersAsync(serviceClient);
 
@@ -777,21 +776,9 @@ In this exercise, you created containers and managed blobs by using the Storage 
 
 1.  If this is your first time opening Cloud Shell using your subscription, you can use the **Welcome to Azure Cloud Shell Wizard** to configure Cloud Shell for first-time usage. Perform the following actions in the wizard:
     
-    1.  A dialog box prompts you to create a new storage account to begin using the shell. Accept the default settings, and then select **Create storage**. 
+    1.  A dialog box prompts you to configure the shell. Select **Bash**, review the selected subscription, and then select **Create storage**. 
 
     > **Note**: Wait for Cloud Shell to finish its initial setup procedures before moving forward with the lab. If you don't notice Cloud Shell configuration options, this is most likely because you're using an existing subscription with this course's labs. The labs are written with the presumption that you're using a new subscription.
-
-1.  At the **Cloud Shell** command prompt in the portal, enter the following command, and then select Enter to list all resource groups in the subscription:
-
-    ```
-    az group list
-    ```
-
-1.  At the command prompt, enter the following command, and then select Enter to get a list of possible commands to delete a resource group:
-
-    ```
-    az group delete --help
-    ```
 
 #### Task 2: Delete a resource group
 

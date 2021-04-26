@@ -1,12 +1,13 @@
 ---
 lab:
-    title: 'Lab: Authenticating to and querying Microsoft Graph by using MSAL and .NET SDKs'
+    az204Title: 'Lab 06: Authenticating to and querying Microsoft Graph by using MSAL and .NET SDKs'
+    az020Title: 'Lab 06: Authenticating to and querying Microsoft Graph by using MSAL and .NET SDKs'
     az204Module: 'Module 06: Implement user authentication and authorization'
     az020Module: 'Module 06: Implement user authentication and authorization'
     type: 'Answer Key'
 ---
 
-# Lab: Authenticating to and querying Microsoft Graph by using MSAL and .NET SDKs
+# Lab 06: Authenticating to and querying Microsoft Graph by using MSAL and .NET SDKs
 # Student lab answer key
 
 ## Microsoft Azure user interface
@@ -79,7 +80,7 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
 
 1.  In the **Authentication** section, perform the following actions:
 
-    1.  In the **Default client type** subsection, select **Yes**.
+    1.  In the **Advanced settings** - **Allow public client flows** subsection, select **Yes**.
 
     1.  Select **Save**.
 

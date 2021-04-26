@@ -1,12 +1,13 @@
 ---
 lab:
-    title: 'Lab: Constructing a NoSQL data solution by using Azure Cosmos DB'
+    az204Title: 'Lab 04: Constructing a polyglot data solution'
+    az020Title: 'Lab 04: Constructing a polyglot data solution'
     az204Module: 'Module 04: Develop solutions that use Cosmos DB storage'
     az020Module: 'Module 04: Develop solutions that use Cosmos DB storage'
     type: 'Answer Key'
 ---
 
-# Lab: Constructing a polyglot data solution
+# Lab 04: Constructing a polyglot data solution
 # Student lab answer key
 
 ## Microsoft Azure user interface
@@ -61,7 +62,7 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
 
 1.  From the **SQL servers** blade, find your list of SQL server instances.
 
-1.  From the **SQL servers** blade, select **Add**.
+1.  From the **SQL servers** blade, select **New**.
 
 1.  From the **Create SQL Database Server** blade, observe the tabs from the blade, such as **Basics**, **Networking**, and **Additional settings**.
 
@@ -107,7 +108,7 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
 
 1.  From the **Azure Cosmos DB** blade, find your list of Azure Cosmos DB instances.
 
-1.  From the **Azure Cosmos DB** blade, select **Add**.
+1.  From the **Azure Cosmos DB** blade, select **New**.
 
 1.  From the **Create Azure Cosmos DB Account** blade, observe the tabs from the blade, such as **Basics**, **Network**, and **Tags**.
 
@@ -122,8 +123,6 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
     1.  In the **AccountName** text box, enter **polycosmos*[yourname]***.
     
     1.  In the **API** drop-down list, select **Core (SQL)**.
-
-    1.  In the **Notebooks (Preview)** section, select **Off**.
 
     1.  In the **Apply Free Tier Discount** section, select **Do Not Apply**.
     
@@ -159,7 +158,7 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
 
 1.  From the **Storage accounts** blade, find your list of Storage instances.
 
-1.  From the **Storage accounts** blade, select **Add**.
+1.  From the **Storage accounts** blade, select **New**.
 
 1.  From the **Create storage account** blade, observe the tabs from the blade, such as **Basics**, **Advanced**, and **Tags**.
 
@@ -180,9 +179,7 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
     1.  In the **Account kind** drop-down list, select **StorageV2 (general purpose v2)**.
     
     1.  In the **Replication** drop-down list, select **Locally-redundant storage (LRS)**.
-    
-    1.  In the **Access tier (default)** section, ensure that **Hot** is selected.
-    
+        
     1.  Select **Review + Create**.
 
 1.  From the **Review + Create** tab, review the options that you selected during the previous steps.
@@ -215,7 +212,7 @@ In this exercise, you created all the Azure resources that you'll need for a pol
     
     1.  In the **Public access level** drop-down list, select **Blob (anonymous read access for blobs only)**.
     
-    1.  Select **OK**.
+    1.  Select **Create**.
 
 1.  Back in the **Containers** section, select the newly created **images** container.
 
@@ -231,7 +228,7 @@ In this exercise, you created all the Azure resources that you'll need for a pol
     
     1.  In the **Files** section, select the **Folder** icon.
     
-    1.  In the **File Explorer** window, browse to **Allfiles (F):\\Allfiles\\Labs\\04\\Starter\\Images**, select all 42 **.jpg** image files, and then select **Open**.
+    1.  In the **File Explorer** window, browse to **Allfiles (F):\\Allfiles\\Labs\\04\\Starter\\Images**, select all 42 individual **.jpg** image files, and then select **Open**.
     
     1.  Ensure that **Overwrite if files already exist** is selected, and then select **Upload**.
 
@@ -305,8 +302,8 @@ In this exercise, you created all the Azure resources that you'll need for a pol
     
     1.  Select **OK**.
 
-    > **Note**: Wait for the database to be created before you continue with this lab.
-
+    > **Note**: Wait for the database to be created before you continue with this lab. If you receive a firewall-related error on the import step, it means you did not correctly configure the **Allow Azure services to access server** setting on your SQL Server earlier in the lab.  Review your settings, delete the empty **AdventureWorks** database, and then attempt your import again.
+    
 #### Task 4: Use an imported SQL database
 
 1.  In the Azure portal's navigation pane, select the **Resource groups** link.
@@ -481,7 +478,7 @@ In this exercise, you configured your ASP.NET web application to connect to your
 
 1.  In the **Visual Studio Code** window, access the shortcut menu or right-click or activate the shortcut menu for the Explorer pane, and then select **Open in Terminal**.
 
-1.  At the open command prompt, enter the following command, and then select Enter to create a new .NET project named **AdventureWorks.Migrate** in a folder with the same name:
+1.  At the open command prompt, enter the following command, and then select Enter to create a new .NET console project named **AdventureWorks.Migrate** in a folder with the same name:
 
     ```
     dotnet new console --name AdventureWorks.Migrate
@@ -527,7 +524,7 @@ In this exercise, you configured your ASP.NET web application to connect to your
 
     > **Note**: The **dotnet add package** command will add the **Microsoft.Azure.Cosmos** package from **NuGet**. For more information, go to: [Microsoft.Azure.Cosmos](https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.4.1).
 
-1.  At the command prompt, enter the following command, and then select Enter to build the .NET web application:
+1.  At the command prompt, enter the following command, and then select Enter to build the .NET console application:
 
     ```
     dotnet build
@@ -621,7 +618,7 @@ In this exercise, you configured your ASP.NET web application to connect to your
     cd .\AdventureWorks.Migrate\
     ```
 
-1.  At the command prompt, enter the following command, and then select Enter to build the .NET web application:
+1.  At the command prompt, enter the following command, and then select Enter to build the .NET console application:
 
     ```
     dotnet build
@@ -661,7 +658,7 @@ In this exercise, you configured your ASP.NET web application to connect to your
     cd .\AdventureWorks.Migrate\
     ```
     
-1.  At the command prompt,  enter the following command, and then select Enter to build the .NET web application:
+1.  At the command prompt,  enter the following command, and then select Enter to build the .NET console application:
 
     ```
     dotnet build
@@ -736,7 +733,7 @@ In this exercise, you configured your ASP.NET web application to connect to your
     cd .\AdventureWorks.Migrate\
     ```
     
-1.  At the command prompt, enter the following command, and then select Enter to build the .NET web application:
+1.  At the command prompt, enter the following command, and then select Enter to build the .NET console application:
 
     ```
     dotnet build
@@ -746,7 +743,7 @@ In this exercise, you configured your ASP.NET web application to connect to your
 
 #### Task 5: Perform a migration
 
-1.  At the open command prompt, enter the following command, and then select Enter to run the .NET web application:
+1.  At the open command prompt, enter the following command, and then select Enter to run the .NET console application:
 
     ```
     dotnet run
@@ -1071,7 +1068,7 @@ In this exercise, you used Entity Framework and the .NET SDK for Azure Cosmos DB
     cd .\AdventureWorks.Web\
     ```
 
-1.  At the command prompt, enter the following command, and then select Enter to run the .NET web application:
+1.  At the command prompt, enter the following command, and then select Enter to run the ASP.NET web application:
 
     ```
     dotnet run
@@ -1105,27 +1102,15 @@ In this exercise, you wrote C# code to query an Azure Cosmos DB collection by us
 
 #### Task 1: Open Azure Cloud Shell
 
-1.  In the portal, select the **Cloud Shell** icon to open a new shell instance.
+1.  In the Azure portal, select the **Cloud Shell** icon to open a new shell instance.
 
     > **Note**: The **Cloud Shell** icon is represented by a greater than sign (\>) and underscore character (\_).
 
 1.  If this is your first time opening Cloud Shell using your subscription, you can use the **Welcome to Azure Cloud Shell Wizard** to configure Cloud Shell for first-time usage. Perform the following actions in the wizard:
     
-    1.  A dialog box prompts you to create a new storage account to begin using the shell. Accept the default settings, and then select **Create storage**.
+    1.  A dialog box prompts you to configure the shell. Select **Bash**, review the selected subscription, and then select **Create storage**.
     
     > **Note**: Wait for the Cloud Shell to finish its initial setup procedures before moving forward with the lab.If you don't notice the Cloud Shell configuration options, this is most likely because you're using an existing subscription with this course's labs. The labs are written with the presumption that you're using a new subscription.
-
-1.  At the **Cloud Shell** command prompt in the portal, enter in the following command, and then select Enter to list all resource groups in the subscription:
-
-    ```
-    az group list
-    ```
-
-1.  At command the prompt, enter the following command, and then select Enter to get a list of possible commands to delete a resource group:
-
-    ```
-    az group delete --help
-    ```
 
 #### Task 2: Delete resource groups
 
